@@ -1,3 +1,5 @@
+Source: https://github.com/go-monk/reading-data
+
 # os.ReadFile
 
 The most common data source is a local file. The easiest way to read data from a file is using the os.ReadFile function:
