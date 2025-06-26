@@ -1,6 +1,4 @@
-# Local files
-
-## os.ReadFile
+# os.ReadFile
 
 The most common data source is a local file. The easiest way to read data from a file is using the os.ReadFile function:
 
@@ -14,7 +12,7 @@ fmt.Print(string(data))
 
 We get back the contents of the file as slice of bytes (`data`) so we need to convert it to string representation to make it human-readable.
 
-## os.Open 
+# os.Open 
 
 If a file is big enough we might not want to slurp the whole file into memory before doing something with the data (like printing it). To read a file in small chunks, let's say of 10 bytes, you could do something like:
 
@@ -66,7 +64,7 @@ f.Read(data)
 fmt.Print(string(data))
 ```
 
-## bufio.NewScanner
+# bufio.NewScanner
 
 A more common way to read a file by chunks is to use bufio.NewScanner. This way you read a file by "logical" chunks, like by lines:
 
