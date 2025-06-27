@@ -1,5 +1,21 @@
 Source: https://github.com/go-monk/reading-data
 
+Go uses bytes (8-bit numbers) as the fundamental unit for I/O operations. The `io.Reader` interface abstracts any source you can read a stream of bytes from:
+
+```go
+type Reader interface {
+    Read(buf []byte) (n int, err error)
+}
+```
+
+The `Read` method fills the provided slice `buf` with up to len(p) bytes and returns the number of bytes read. When the stream ends, it returns an `io.EOF` error.
+
+io.Reader is widely used because it provides an abstraction of all the types from which bytes can be read, like files, memory buffers, network connections, HTTP clients, archivers and hashers. The standard library provides many io.Reader implementations. For example you can create a Reader from a string:
+
+```go
+r := strings.NewReader("hello")
+```
+
 # os.ReadFile
 
 The most common data source is a local file. The easiest way to read data from a file is using the os.ReadFile function:
