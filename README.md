@@ -8,9 +8,9 @@ type Reader interface {
 }
 ```
 
-The `Read` method fills the provided slice `buf` with up to len(p) bytes and returns the number of bytes read. When the stream ends, it returns an `io.EOF` error.
+The `Read` method fills the provided slice `buf` with up to len(buf) bytes and returns the number of bytes read. When the stream ends, it returns an `io.EOF` error.
 
-io.Reader is widely used because it provides an abstraction of all the types from which bytes can be read, like files, memory buffers, network connections, HTTP clients, archivers and hashers. The standard library provides many io.Reader implementations. For example you can create a Reader from a string:
+io.Reader is widely used because it is an abstraction of many data sources, like files, memory buffers, network connections, HTTP clients, archivers and hashers. The standard library provides various io.Reader implementations. For example you can create a Reader from a string:
 
 ```go
 r := strings.NewReader("hello")
