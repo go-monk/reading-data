@@ -107,7 +107,7 @@ You can customize how the input is split by using the Split method with a custom
 
 # io.Reader abstraction
 
-In the above examples we saw various ways to read a local file. But local files are just one type of data source. We also have data coming from terminal or other commands (STDIN) or from remote data sources. And Go abstract all these data sources from which you can read with the io.Reader interface:
+In these examples we saw various ways to read a local file. But local files are just one type of data source. We also have data coming from terminal or other commands (STDIN) or from remote data sources. And, as mentioned above, Go abstract all these data sources from which you can read with the io.Reader interface:
 
 ```go
 type Reader interface {
