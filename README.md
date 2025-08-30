@@ -1,5 +1,3 @@
-Source: https://github.com/go-monk/reading-data
-
 Go uses bytes (8-bit numbers) as the fundamental unit for I/O operations. The `io.Reader` interface is an abstraction of all the types you can read a stream of bytes from:
 
 ```go
